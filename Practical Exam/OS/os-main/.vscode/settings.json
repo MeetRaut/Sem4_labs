@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.ejs": "html",
+        ".env*": "dotenv",
+        "FCFS.C": "cpp",
+        "10processes.C": "cpp",
+        "chilldprocess.C": "cpp",
+        "worstfit.C": "cpp",
+        "sjf.C": "cpp"
+    }
+}

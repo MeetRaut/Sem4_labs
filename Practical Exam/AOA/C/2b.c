@@ -1,6 +1,20 @@
 // Merge sort 
 #include<stdio.h>
 
+// Function to perform mergesort
+void mergesort(int a[], int low, int high) {
+    if (low < high) {
+        int mid = (low + high) / 2;
+        
+        // Recursive calls for left and right halves
+        mergesort(a, low, mid);
+        mergesort(a, mid + 1, high);
+
+        // Merge the sorted halves
+        merge(a, mid, low, high);
+    }
+}
+
 // Function to merge two sorted arrays
 void merge(int a[], int mid, int low, int high) {
     int i, j, k;
@@ -46,19 +60,7 @@ void merge(int a[], int mid, int low, int high) {
     }
 }
 
-// Function to perform mergesort
-void mergesort(int a[], int low, int high) {
-    if (low < high) {
-        int mid = (low + high) / 2;
-        
-        // Recursive calls for left and right halves
-        mergesort(a, low, mid);
-        mergesort(a, mid + 1, high);
 
-        // Merge the sorted halves
-        merge(a, mid, low, high);
-    }
-}
 
 int main() {
     // Input from the user

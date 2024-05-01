@@ -1,6 +1,5 @@
 // Dijkstra's algorithm
 #include<stdio.h>
-#define INF 999
 
 // Function to find the minimum of two integers
 int minimum(int a, int b) {
@@ -50,10 +49,10 @@ int main() {
         }
     }
 
-    // Initializing distance array to be infinity (999, as declared above)
+    // Initializing distance array to be infinity 
     distance[0] = 0;
     for(int i = 1; i < v; i++) {
-        distance[i] = INF; 
+        distance[i] = 999; 
     }
 
     // Applying Dijkstra's algorithm

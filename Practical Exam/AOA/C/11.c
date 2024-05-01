@@ -7,8 +7,7 @@ int x[100]; // Array to store the column position of queens
 
 // Function to check if a queen can be placed in a given column
 int place(int k, int i) {
-    int j;
-    for (j = 1; j <= k - 1; j++) {
+    for (int j = 1; j <= k - 1; j++) {
         // Check if there is a queen in the same column or diagonals
         if (x[j] == i || abs(x[j] - i) == abs(j - k))
             return 0; // Queen cannot be placed here
@@ -22,9 +21,7 @@ void Nqueen(int k, int n) {
     for (i = 1; i <= n; i++) {
         if (place(k, i)) {
             x[k] = i; // Place queen in this column
-            if (k == n) { // All queens are placed
-                // Print the solution
-                
+            if (k == n) { // All queens are placed                
                 // Print the 
                 printf("Solution %d: ", count++);
                 for (int j = 1; j <= n; j++) {
